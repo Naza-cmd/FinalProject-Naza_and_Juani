@@ -79,12 +79,40 @@ background-color: #E6821C;
 transform: scale(1.1);
 }
 
-.fish {
+.fish-1 {
 position:absolute;
-animation-name : swimming ;
+animation-name : swimming-1 ;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
 }
+
+.fish-2 {
+    position:absolute;
+    animation-name : swimming-2 ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: scale(2) ;
+    }
+.fish-3 {
+    position:absolute;
+    animation-name : swimming-3 ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    }
+.fish-4 {
+    position:absolute;
+    animation-name : swimming-4 ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: scale(2)
+    }
+.fish-5 {
+    position:absolute;
+    animation-name : swimming-5 ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: scale(2)
+    }
 
 .zone{
 width: 100%;
@@ -103,10 +131,11 @@ padding: 5%;
 .aphotic {background: #01111E;}
 
 
-.fish-1 {top: 20%; left: 10%; width: 100px; animation-duration: 5s;}
+.fish-1 {top: 20%; right: 10%; width: 100px; animation-duration: 16s; transform: scaleX(-1);}
 .fish-2 {top: 60%; left: 80%; width: 70px; animation-duration: 6s; }
-.fish-3 {top: 40%; left: 30%; width: 90px; animation-duration: 10s; }
-.fish-4 {top: 70%; left: 50%; width: 80px; animation-duration: 7s; }
+.fish-3 {top: 40%; right: 30%; width: 90px; animation-duration: 10s; transform: scaleX(1); }
+.fish-4 {top: 70%; left: 50%; width: 80px; animation-duration: 9s; }
+.fish-5 {top: 70%; left: 50%; width: 80px; animation-duration: 12s; transform: scaleX(-1);}
 
 #gameScreen h2,
 #gameScreen p {
@@ -115,9 +144,25 @@ margin-left: 5%;
 text-align: left;
 }
 
+@keyframes swimming-1 { 
+    0% {right:0px; top: 50px; }
+    100% { right:2000px; top: 50px; } 
+    }
+    @keyframes swimming-2 { 
+        0% {left:0px; top: 250px; }
+        100% { left:2080px; top:250px; } 
+        }
+        @keyframes swimming-3 { 
+            0% {right:0px; top: 750px; }
+            100% { right:2000px; top:750px; } 
+            }
+            @keyframes swimming-4 { 
+                0% {left:0px; top: 390px; }
+                100% { left:2000px; top:390px; } 
+                }
+                @keyframes swimming-5 { 
+                    0% {left:0px; top: 900px; }
+                    100% { left:2000px; top:900px; } 
+                    }
 
 
-@keyframes swimming { 
-0% {transform: translateX(0); }
-100% {transform: translateX(1000px); } 
-}
