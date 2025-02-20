@@ -2,7 +2,7 @@
     font-family : "Luckiest Guy" ;
     src : url ("./fonts/LuckiestGuy.ttf");
 }
-.body {
+body {
 background-color: #53A8E2;
 font-family : "Luckiest Guy" , sans-serif;
 text-align : center;
