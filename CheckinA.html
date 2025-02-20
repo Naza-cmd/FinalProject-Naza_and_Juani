@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ocean Zones</title>
+       
+</head>
+    <body>
+        <link rel = "StyleSheet" type="text/css" href = 'style_guide.css'/> <!-- This links the CSS file with the Style Sheet to the HTML -->
+
+        <div id = "startScreen" class="screen"> <!-- This is the div tag for the Starting Screen -->
+
+            <h1>OCEAN ZONES</h1>
+            <button class = "start-button" onclick="startGame()">START</button> <!-- This makes the start button clickable  -->
+
+
+            <img src="Fish1.png" alt="Fish 1" class="fish-1">
+            <img src="Fish1.png" alt="Fish 2" class="fish-2">
+            <img src="fishy.png" alt="Fish 3" class="fish-3">
+            <img src="Group.png" alt="Fish 4" class="fish-4">
+            <img src="lastfishy.png" alt="Fish 5" class="fish-5">
+        </div>
+
+        <script>
+            function startGame() {
+                document.getElementById('startScreen').style.display = 'none';
+
+            }
+            
+        </script>
+    </body>
+</html>
