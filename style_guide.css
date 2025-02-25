@@ -2,66 +2,64 @@
     font-family : "Luckiest Guy" ;
     src : url ("./fonts/LuckiestGuy.ttf");
 }
+
 body {
 background-color: #53A8E2;
-font-family : "Luckiest Guy" , sans-serif;
+font-family : "Luckiest Guy" , sans-serif ;
 text-align : center;
 margin: 0;
 overflow: hidden;
 
 }
+
 .vl{
 border-left: 6px solid white;
 height:75vh;
 position:absolute;
-margin-left: 5%;
 left: 0%;
 bottom:0%;          
 }
 
-.container {
-position: relative;
-width: 100%;
-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-
+.depth-container {
+    font-size: 24px;
+    left: 30px;
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
 }
+
 
 .screen {
-width: 100%;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction:column;
-position: absolute;
-top: 0%;
-left: 0%;
-
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    position: absolute;
+    top: 0%;
+    left: 0%;
 }
-
+    
 #startScreen {
 background-color: #53A8E2;
 }
-#gameScreen {
+    
+#gameScreen, .zone-screen {
 display: none;
-background-color:#f0f5ff ;
+background-color:#ffffff ;
 flex-direction: column;
 color:#E6821C;
 font-size: 150%;
-
+}
+    
+h1 {
+    color:#033b6A;
+    font-size: 128px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-h1{
-font-size: 128px;
-color: #033b6A;
-font-weight: bold;
-text-transform: uppercase;
-margin-bottom: 20px;
-}
 
 .start-button {
 background-color: #F7941E;
@@ -84,6 +82,7 @@ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 transition: 0.3s;
 
 }
+
 
 .start-button:hover{
 background-color: #E6821C;
@@ -118,29 +117,25 @@ animation-iteration-count: infinite;
     transform: scale(2)
     }
 .fish-5 {
-    position:absolute;
-    animation-name : swimming-5 ;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    transform: scale(2)
-    }
+        position:absolute;
+        animation-name : swimming-5 ;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform: scale(2)
+        }
 
+
+      
 .zone{
 width: 100%;
-margin-right: 5%;
 height: 33% ;
 display: flex;
 align-items: center;
 justify-content: flex-end;
 color: white;
-font-size: 24px;
+font-size: 40px;
 padding: 5%;
-
-}
-.euphotic {background: #5AA9E6;}
-.dysphotic {background: #2C7CB9;}
-.aphotic {background: #01111E;}
-
+} 
 
 .fish-1 {top: 20%; right: 10%; width: 100px; animation-duration: 16s; transform: scaleX(-1);}
 .fish-2 {top: 60%; left: 80%; width: 70px; animation-duration: 6s; }
@@ -148,12 +143,123 @@ padding: 5%;
 .fish-4 {top: 70%; left: 50%; width: 80px; animation-duration: 9s; }
 .fish-5 {top: 70%; left: 50%; width: 80px; animation-duration: 12s; transform: scaleX(-1);}
 
-#gameScreen h2,
-#gameScreen p {
-align-self: flex-start;
-margin-left: 5%;
-text-align: left;
+
+
+.euphotic {background: #5AA9E6;}
+.dysphotic {background: #2C7CB9;}
+.aphotic {background: #01111E;}
+
+.fish-1, .fish-2, .fish-3, .fish-4, .fish-5{
+    position: absolute;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+
+
+.home-button {
+    position :absolute;
+    left: 20px;
+    top: 50px;
+    width: 50px;
+    cursor: pointer;
+
+}
+
+.zone-name{
+    font-size: 1000px;
+    color: #e6821c;
+    font-weight: bold;
+}
+
+/*.ocean-water-1{
+    position :absolute;
+    background-color: #133002;
+    border-radius: 20px;
+    height: 1194px;
+    padding: 20px;
+}
+    */
+
+.animal {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; 
+    width: 100px ;
+    position: absolute;
+}
+
+.animal:hover{
+    transform: scale(1.1);
+}
+
+.turtle {top: 50px; left: 69%; width: 383.562px;height: 204.272px;flex-shrink: 0;}
+.dolphin {top: 30px; left: 10%; width: 338px; height: 304px; flex-shrink: 0;}
+.jellyfish {top:100px; left: 50%; width: 308px; height: 171px;flex-shrink: 0;}
+
+.squid {top: 50px; left: 80%;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
+.whale {top: 30px; left: 10%;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
+.crab {top: 60px; left: 50% ;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
+
+.angeler { top: 50px; left: 80%;}
+.starfish {top: 30px; left: 10%;}
+.fangtooth {top: 20px; left: 50% ;}
+
+
+
+.info-card  {
+    border-radius: 41px;
+    border: 5px solid #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: #033b6A;
+    justify-content: center;
+    text-align:center;
+    margin-left: 3%;
+    width: 1350px;
+    height: 209px;
+    flex-shrink: 0;
+    background: #ffffff;
+    
+}
+.fact-text{
+    position:absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow : 0 2px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.fact-text p {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+}
+.next-zone {
+    margin-top: 15px;
+    cursor:pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    padding: 10px 20px;
+    color: white;
+    background-color: #2C7CB9;
+}
+
+.next-zone:hover {
+    background-color: #2C7CB9;
+}
+
+
+
 
 @keyframes swimming-1 { 
     0% {right:0px; top: 50px; }
@@ -175,5 +281,3 @@ text-align: left;
                     0% {left:0px; top: 900px; }
                     100% { left:2000px; top:900px; } 
                     }
-
-
