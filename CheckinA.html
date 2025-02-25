@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ocean Zones</title>
-       
-</head>
-    <body>
         <link rel = "StyleSheet" type="text/css" href = 'style_guide.css'/> <!-- This links the CSS file with the Style Sheet to the HTML -->
 
-        <div id = "startScreen" class="screen"> <!-- This is the div tag for the Starting Screen -->
+</head>
+
+    <body>
+        <!-- START SCREEN -->
+        <div id = "startScreen" class = "screen"> 
 
             <h1>OCEAN ZONES</h1>
             <button class = "start-button" onclick="startGame()">START</button> <!-- This makes the start button clickable  -->
@@ -20,14 +21,112 @@
             <img src="fishy.png" alt="Fish 3" class="fish-3">
             <img src="Group.png" alt="Fish 4" class="fish-4">
             <img src="lastfishy.png" alt="Fish 5" class="fish-5">
+
         </div>
 
-        <script>
-            function startGame() {
-                document.getElementById('startScreen').style.display = 'none';
 
-            }
+         <!-- GAME SCREEN -->
+        <div id = "gameScreen" class="screen">
+            <h2>PICK AN OCEAN ZONE</h2>
+            <p>Click on a zone to learn more about the aquatic life there. </p>
+        
+            <div class = "vl"></div>
+           
+            <!--Fish BackgroundImages-->
+            <div class = "zone euphotic" onclick = "showZone('euphotic')">EUPHOTIC ZONE</div>
+            <div class = "zone dysphotic" onclick = "showZone('dysphotic')">DYSPHOTIC ZONE</div>
+            <div class = "zone aphotic" onclick = "showZone('aphotic')">APHOTIC ZONE</div>
+
+           
+            <div class = "depth-container" style = "top : 230px;">- Sea Level</div>
+            <div class = "depth-container" style = "top : 470px;">- 200 Meters</div>
+            <div class = "depth-container" style = "top : 760px;">- 1000+ Meters</div>
+
+        </div>
+
+        <!-- EUPHOTIC ZONE -->
+        <div id = "euphoticZone" class="zone-screen">
+            </h1>EUPHOTIC ZONE</h1>
+            <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
             
+           <div class = "ocean-water-1">
+                <img src="image-from-rawpixel-id-15709245-png.png" alt="Turtle" class="animal turtle" onclick= "showFact('Hi ! Im Shelly the Turtle and I live in the euphotic zone, where its rich in food, sunlight and warmth. ')">
+                <img src="image.png"                               alt="Dolphin" class="animal dolphin" onclick= "showFact('Sup! Im Flipper the Dolphin and I communicate with my friends by whistling and making high pitched noises.')">
+                <img src="image-from-rawpixel-id-9371553-png.png"  alt="Jellyfish" class="animal jellyfish" onclick= "showFact('Hi ! Im Bubbles the Jellyfish and I live in upper most layer of the ocean, it extends about 200 meters deep')">
+
+            </div>
+
+           <div class = "info-card" >
+                <p id = "fact-text">Tap on a sea creature to learn fun facts about it </p>
+            </div>
+            
+        </div>
+
+
+         <!-- DYSPHOTIC ZONE -->
+        <div id = "dysphoticZone" class="zone-screen">
+           </h1>DYSPHOTIC ZONE</h1>
+            <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
+        
+       <div class = "ocean-water-2">
+            <img src="RealSquid.png" alt="Squid" class="animal squid" onclick= "showFact('Hi ! I’m Eddy the Squid and I live in the Dysphotic zone also known as the Dark Zone. This zone stores the oceans supply of Carbon.')">
+            <img src="Whale.png"     alt="Whale" class="animal whale" onclick= "showFact('Hi ! I’m Fin the Blue Whale and I live in the Dysphotic zone, where only a dim amount of light and extends over 200 meters deep')">
+            <img src="Crab.png"      alt="Crab" class="animal crab" onclick= "showFact('Hi ! I’m Eugene a Red Crab and I’m a Crustacean, thats why I’ve got a hard red shell. Many sea creatures in this zone are bioluminescent')">
+
+        </div>
+
+        <div class = "info-card" >
+            <p id = "fact-text">Tap on a sea creature to learn fun facts about it </p>
+        </div>
+    </div>
+
+         <!-- APHOTIC ZONE -->
+         <div id = "aphoticZone" class="zone-screen">
+        </h1>APHOTIC ZONE</h1>
+        <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
+        
+       <div class = "ocean-water-3">
+            <img src="AnglerFish.png"alt="Angler" class="animal angler" onclick= "showFact('Hello ! I’m Dream the Angler Fish and I live in the Aphotic Zone, I have snout that ends in a glowing lure that light up my path , its called a illicium.')">
+            <img src="Starfish.png"  alt="Starfish" class="animal starfish" onclick= "showFact('Hi ! I’m Patrick the Star fish and I live in the Aphotic  zone, I am able to grow a new arm of leg if i loose one, or make a new starfish all on my own.')">
+            <img src="Fangtooth.png" alt="Fangtooth" class="animal fangtooth" onclick= "showFact('What’s Up ! I’m Greg the Fang tooth Fish and I live in the Aphotic zone, where no light gets into and the pressure down here is very very high deep.')">
+
+        </div>
+ 
+        <div class = "info-card" >
+            <p id = "fact-text">Tap on a sea creature to learn fun facts about it </p>
+        </div>
+
+    </div>
+
+        <script>
+                function startGame() {
+                    document.getElementById('startScreen').style.display = 'none';
+                    document.getElementById('gameScreen').style.display = 'flex';
+                    
+                }
+
+
+                function showZone(zone) {
+                    document.getElementById('gameScreen').style.display = 'none';
+                    document.getElementById('euphoticZone').style.display = 'none';
+                    document.getElementById('dysphoticZone').style.display = 'none';
+                    document.getElementById('aphoticZone').style.display = 'none';
+                    document.getElementById(`${zone}Zone`).style.display = 'block';
+                   
+                }
+
+                function goHome() {
+                    document.getElementById('euphoticZone').style.display = 'none';
+                    document.getElementById('dysphoticZone').style.display = 'none';
+                    document.getElementById('aphoticZone').style.display = 'none';
+                    document.getElementById('gameScreen').style.display = 'flex';
+
+                }
+
+                function showFact(fact) {
+                    document.getElementById('fact-text').innerText = fact;
+                }
+          
         </script>
     </body>
 </html>
