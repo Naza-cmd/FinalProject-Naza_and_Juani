@@ -53,7 +53,9 @@ flex-direction: column;
 color:#E6821C;
 font-size: 150%;
 }
-    
+   
+
+
 h1 {
     color:#033b6A;
     font-size: 128px;
@@ -129,7 +131,7 @@ animation-iteration-count: infinite;
       
 .zone{
 width: 100%;
-height: 33% ;
+height: 1000% ;
 display: flex;
 align-items: center;
 justify-content: flex-end;
@@ -173,29 +175,65 @@ padding: 5%;
     font-weight: bold;
 }
 
-/*.ocean-water-1{
+#ocean-water-1{
     position :absolute;
     background-color: #133002;
     border-radius: 20px;
     height: 1194px;
     padding: 20px;
 }
-    */
 
+.zone-title{
+    font-size: 50px;
+    color:#e6821c;
+    position: absolute;
+    top:30px;
+    right: 50px;
+    text-transform:uppercase;
+}
+#ocean-water-1{
+    position :absolute;
+    background-color: #133002;
+    border-radius: 20px;
+    height: 1194px;
+    padding: 20px;
+}
+    
+.zone-title{
+    font-size: 50px;
+    color:#e6821c;
+    position: absolute;
+    top:30px;
+    right: 50px;
+    text-transform:uppercase;
+}
+.ocean-water{
+    position :absolute;width: 100%;
+    background-color:#5AA9E6;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 1194px;
+    padding: 20px;
+}
+  
 .animal {
     transition: transform 0.3s ease-in-out;
     cursor: pointer; 
     width: 100px ;
     position: absolute;
+    
 }
 
 .animal:hover{
     transform: scale(1.1);
 }
 
-.turtle {top: 50px; left: 69%; width: 383.562px;height: 204.272px;flex-shrink: 0;}
-.dolphin {top: 30px; left: 10%; width: 338px; height: 304px; flex-shrink: 0;}
-.jellyfish {top:100px; left: 50%; width: 308px; height: 171px;flex-shrink: 0;}
+.turtle {top: 200px; left: 55%; width: 600.562px; height: 350.272px;flex-shrink: 0;}
+.dolphin {top: 300px; left: 5%; width: 500px; height: 500px;}
+.jellyfish {top:150px; left: 30%; width: 408px; height: 271px;flex-shrink: 0;}
 
 .squid {top: 50px; left: 80%;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
 .whale {top: 30px; left: 10%;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
@@ -208,51 +246,66 @@ padding: 5%;
 
 
 .info-card  {
-    border-radius: 41px;
-    border: 5px solid #000000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
-    color: #033b6A;
-    justify-content: center;
-    text-align:center;
-    margin-left: 3%;
-    width: 1350px;
-    height: 209px;
-    flex-shrink: 0;
-    background: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  width: 85%;
+  background-color: #ffffff;
+  padding:20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #01111E;
+  left: 5%;
+  
     
 }
+
 .fact-text{
     position:absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     bottom: 20px;
+    color: #01111E;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 600px;
-    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow : 0 2px rgba(0,0,0,0.2);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 
-.fact-text p {
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2em;
+.zone-title{
+    font-size: 50px;
+    color: #ffffff;
+    position: absolute;
 }
+
 .next-zone {
-    margin-top: 15px;
-    cursor:pointer;
-    border-radius: 10px;
-    border: none;
-    font-size: 1em;
-    padding: 10px 20px;
+    background-color: #F7941E;
+    width: 318px;
+    height: 90px;
     color: white;
-    background-color: #2C7CB9;
+    font-family : "Luckiest Guy" , sans-serif ;
+    font-size: 40px;
+    font-weight: 400;
+    border: 3px solid white;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    word-wrap: break-word;
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    
 }
 
 .next-zone:hover {
@@ -282,3 +335,22 @@ padding: 5%;
                     0% {left:0px; top: 900px; }
                     100% { left:2000px; top:900px; } 
                     }
+
+.sea-creatures {
+    position: relative;
+    height: 60vh;
+}
+
+.creature {
+    width: 150px;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.creature:hover {
+    transform: scale(1.1);
+
+}
+
+
