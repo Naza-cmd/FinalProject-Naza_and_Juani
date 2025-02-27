@@ -161,11 +161,12 @@ padding: 5%;
 
 
 .home-button {
-    position :absolute;
+    position:absolute;
     left: 20px;
     top: 50px;
     width: 50px;
     cursor: pointer;
+    z-index: 10;
 
 }
 
@@ -175,13 +176,6 @@ padding: 5%;
     font-weight: bold;
 }
 
-#ocean-water-1{
-    position :absolute;
-    background-color: #133002;
-    border-radius: 20px;
-    height: 1194px;
-    padding: 20px;
-}
 
 .zone-title{
     font-size: 50px;
@@ -191,13 +185,7 @@ padding: 5%;
     right: 50px;
     text-transform:uppercase;
 }
-#ocean-water-1{
-    position :absolute;
-    background-color: #133002;
-    border-radius: 20px;
-    height: 1194px;
-    padding: 20px;
-}
+
     
 .zone-title{
     font-size: 50px;
@@ -207,9 +195,21 @@ padding: 5%;
     right: 50px;
     text-transform:uppercase;
 }
-.ocean-water{
+.ocean-water-e{
     position :absolute;width: 100%;
     background-color:#5AA9E6;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 1194px;
+    padding: 20px;
+}
+
+.ocean-water-d{
+    position :absolute;width: 100%;
+    background-color:#2C7CB9;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -235,9 +235,9 @@ padding: 5%;
 .dolphin {top: 300px; left: 5%; width: 500px; height: 500px;}
 .jellyfish {top:150px; left: 30%; width: 408px; height: 271px;flex-shrink: 0;}
 
-.squid {top: 50px; left: 80%;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
-.whale {top: 30px; left: 10%;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
-.crab {top: 60px; left: 50% ;  width: 383.562px;height: 204.272px;flex-shrink: 0;}
+.squid {top: 100px; left: 60%;  width: 400.562px;height: 400.272px;flex-shrink: 0;}
+.whale {top: 90px; left: 5%;  width: 503.562px;height: 504.272px;flex-shrink: 0;}
+.crab {top: 150px; left: 40% ;  width: 283.562px;height: 204.272px;flex-shrink: 0;}
 
 .angeler { top: 50px; left: 80%;}
 .starfish {top: 30px; left: 10%;}
