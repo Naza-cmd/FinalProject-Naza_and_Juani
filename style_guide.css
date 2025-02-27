@@ -128,7 +128,7 @@ animation-iteration-count: infinite;
       
 .zone{
 width: 100%;
-height: 33% ;
+height: 30% ;
 display: flex;
 align-items: center;
 justify-content: flex-end;
@@ -172,14 +172,14 @@ padding: 5%;
     font-weight: bold;
 }
 
-/*.ocean-water-1{
+.ocean-water-1{
     position :absolute;
     background-color: #133002;
     border-radius: 20px;
     height: 1194px;
     padding: 20px;
 }
-    */
+    
 
 .animal {
     transition: transform 0.3s ease-in-out;
@@ -238,6 +238,7 @@ padding: 5%;
 }
 
 
+
 .fact-text p {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -281,3 +282,22 @@ padding: 5%;
                     0% {left:0px; top: 900px; }
                     100% { left:2000px; top:900px; } 
                     }
+
+.sea-creatures {
+    position: relative;
+    height: 60vh;
+}
+
+.creature {
+    width: 150px;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.creature:hover {
+    transform: scale(1.1);
+
+}
+
+
