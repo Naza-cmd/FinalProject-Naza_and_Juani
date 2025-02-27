@@ -10,3 +10,4 @@ The interactive sea life museum will give visitors an exciting experience, takin
 ## Start Screen 
 
 The Start screen is the first screen users sees when they start the experience, on this page there are animated mobile fishes, the title of the experience and the start button
+
