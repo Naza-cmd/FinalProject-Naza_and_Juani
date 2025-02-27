@@ -46,21 +46,29 @@
 
         <!-- EUPHOTIC ZONE -->
         <div id = "euphoticZone" class="zone-screen">
-            </h1>EUPHOTIC ZONE</h1>
-            <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
-            
-           <div class = "ocean-water-1">
-                <img src="image-from-rawpixel-id-15709245-png.png" alt="Turtle" class="animal turtle" onclick= "showFact('Hi ! Im Shelly the Turtle and I live in the euphotic zone, where its rich in food, sunlight and warmth. ')">
-                <img src="image.png"                               alt="Dolphin" class="animal dolphin" onclick= "showFact('Sup! Im Flipper the Dolphin and I communicate with my friends by whistling and making high pitched noises.')">
-                <img src="image-from-rawpixel-id-9371553-png.png"  alt="Jellyfish" class="animal jellyfish" onclick= "showFact('Hi ! Im Bubbles the Jellyfish and I live in upper most layer of the ocean, it extends about 200 meters deep')">
 
-            </div>
+            <h1 class ="zone-title">EUPHOTIC ZONE</h1>
+         <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
+    
+        
+        
+       <div class = "ocean-water-1">
+            <img src="image-from-rawpixel-id-15709245-png.png" alt="Turtle" class="animal turtle" onclick= "showFact('Hi ! Im Shelly the Turtle and I live in the euphotic zone, where its rich in food, sunlight and warmth. ')">
+            <img src="image.png"                               alt="Dolphin" class="animal dolphin" onclick= "showFact('Sup! Im Flipper the Dolphin and I communicate with my friends by whistling and making high pitched noises.')">
+            <img src="image-from-rawpixel-id-9371553-png.png"  alt="Jellyfish" class="animal jellyfish" onclick= "showFact('Hi ! Im Bubbles the Jellyfish and I live in upper most layer of the ocean, it extends about 200 meters deep')">
+
         </div>
+
+       <div class = "info-card" >
+            <p id = "fact-text">Tap on a sea creature to learn fun facts about it </p>
+            <button class = "next-zone" onclick = "nextZone()">Next Zone</button>
+        </div>
+    
        
 
 
 
-         <!-- DYSPHOTIC ZONE 
+         <!-- Dysphotic ZONE -->
         <div id = "dysphoticZone" class="zone-screen">
            </h1>DYSPHOTIC ZONE</h1>
             <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
@@ -77,7 +85,7 @@
         </div>
     </div>
 
-        APHOTIC ZONE 
+        <!-- Aphotic ZONE -->
          <div id = "aphoticZone" class="zone-screen">
         </h1>APHOTIC ZONE</h1>
         <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
@@ -93,7 +101,7 @@
             <p id = "fact-text">Tap on a sea creature to learn fun facts about it </p>
         </div>
 
-    </div> -->
+   
 
         <script>
                 function startGame() {
