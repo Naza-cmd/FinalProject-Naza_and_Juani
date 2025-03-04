@@ -15,9 +15,9 @@ overflow: hidden;
 
 .vl{
 border-left: 6px solid white;
-height:75vh;
+height:80vh;
 position:absolute;
-left: 0%;
+left: 1%;
 bottom:0%;          
 }
 
@@ -131,7 +131,7 @@ animation-iteration-count: infinite;
       
 .zone{
 width: 100%;
-height: 1000% ;
+height: 100% ;
 display: flex;
 align-items: center;
 justify-content: flex-end;
@@ -150,7 +150,7 @@ padding: 5%;
 
 .euphotic {background: #5AA9E6;}
 .dysphotic {background: #2C7CB9;}
-.aphotic {background: #01111E;}
+.aphotic {background:#033b6A}
 
 .fish-1, .fish-2, .fish-3, .fish-4, .fish-5{
     position: absolute;
@@ -162,16 +162,17 @@ padding: 5%;
 
 .home-button {
     position:absolute;
-    left: 20px;
+    left: 50px;
     top: 50px;
     width: 50px;
     cursor: pointer;
     z-index: 10;
+    
 
 }
 
 .zone-name{
-    font-size: 1000px;
+    font-size: 100px;
     color: #e6821c;
     font-weight: bold;
 }
@@ -187,14 +188,7 @@ padding: 5%;
 }
 
     
-.zone-title{
-    font-size: 50px;
-    color:#e6821c;
-    position: absolute;
-    top:30px;
-    right: 50px;
-    text-transform:uppercase;
-}
+
 .ocean-water-e{
     position :absolute;width: 100%;
     background-color:#5AA9E6;
@@ -218,6 +212,18 @@ padding: 5%;
     height: 1194px;
     padding: 20px;
 }
+
+.ocean-water-a{
+    position :absolute;width: 100%;
+    background-color:#033b6A;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 1194px;
+    padding: 20px;
+}
   
 .animal {
     transition: transform 0.3s ease-in-out;
@@ -231,63 +237,94 @@ padding: 5%;
     transform: scale(1.1);
 }
 
-.turtle {top: 200px; left: 55%; width: 600.562px; height: 350.272px;flex-shrink: 0;}
+.turtle {top: 200px; left: 55%; width: 600.562px; height: 350.272px;}
 .dolphin {top: 300px; left: 5%; width: 500px; height: 500px;}
-.jellyfish {top:150px; left: 30%; width: 408px; height: 271px;flex-shrink: 0;}
+.jellyfish {top:150px; left: 30%; width: 408px; height: 271px;}
 
-.squid {top: 100px; left: 60%;  width: 400.562px;height: 400.272px;flex-shrink: 0;}
-.whale {top: 90px; left: 5%;  width: 503.562px;height: 504.272px;flex-shrink: 0;}
-.crab {top: 150px; left: 40% ;  width: 283.562px;height: 204.272px;flex-shrink: 0;}
+.squid {top: 200px; left: 70%;  width: 500.562px;height: 540.272px;}
+.whale {top: 90px; left: 5%;  width: 703.562px;height: 714.272px;}
+.crab {top: 150px; left: 45% ;  width: 283.562px;height: 244.272px;}
 
-.angeler { top: 50px; left: 80%;}
-.starfish {top: 30px; left: 10%;}
-.fangtooth {top: 20px; left: 50% ;}
+.angler { top: 50px; left: 50%; width: 400px; height: 490px;}
+.starfish {top: 30px; left: 30%; width: 200px; height: 200px;}
+.fangtooth {top: 300px; left: 10% ;  width: 403.562px;height: 384.272px;}
+.coral{ top: 35%; left: 75%;  width: 230.562px;height: 304.272px;}
 
 
 
 .info-card  {
   position: absolute;
   bottom: 20px;
+  height: 160px;
   width: 85%;
+font-family: Arial, Helvetica, sans-serif;  font-weight:800;
   background-color: #ffffff;
   padding:20px;
-  border-radius: 15px;
+  border-radius: 41px;
+  border:  5px solid rgb(0, 0, 0);
   display: flex;
+  text-align: left;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
-  color: #1f517a;
+  font-size: 40px;
+  color: #033b6A;  
   left: 5%;
+  line-height: 1.5;
   
     
 }
 
 .fact-text{
-    position:absolute;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    bottom: 20px;
-    color: #01111E;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow : 0 2px rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+width: 800px;
+text-align: left;
+transform: rotate(0deg);
+box-sizing: border-box;
+height: 54px;
+flex-shrink: 0;
+text-align: left;
+overflow: hidden;
+
+line-height: normal;
 }
+
 
 
 .zone-title{
     font-size: 50px;
     color: #ffffff;
+    top: 50PX;
     position: absolute;
+    z-index: 11;
+    right: 5%;
 }
 
 .next-zone {
     background-color: #F7941E;
+    width: 318px;
+    height: 90px;
+    color: white;
+    font-family : "Luckiest Guy" , sans-serif ;
+    font-size: 30px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    word-wrap: break-word; 
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    
+}
+
+.next-zone:hover {
+    background-color: #2C7CB9;
+}
+
+.back-home {
+    background-color: #da0909;
     width: 318px;
     height: 90px;
     color: white;
@@ -308,9 +345,10 @@ padding: 5%;
     
 }
 
-.next-zone:hover {
+.back-home:hover {
     background-color: #2C7CB9;
 }
+
 
 
 
