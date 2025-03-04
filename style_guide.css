@@ -158,7 +158,9 @@ padding: 5%;
     animation-iteration-count: infinite;
 }
 
-
+.audio{
+    display: none;
+}
 
 .home-button {
     position:absolute;
@@ -274,7 +276,7 @@ font-family: Arial, Helvetica, sans-serif;  font-weight:800;
     
 }
 
-.fact-text{
+.fact-text-e{
 width: 800px;
 text-align: left;
 transform: rotate(0deg);
@@ -287,6 +289,32 @@ overflow: hidden;
 line-height: normal;
 }
 
+.fact-text-d{
+    width: 800px;
+    text-align: left;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+    height: 54px;
+    flex-shrink: 0;
+    text-align: left;
+    overflow: hidden;
+    
+    line-height: normal;
+    }
+    
+    .fact-text-a{
+        width: 800px;
+        text-align: left;
+        transform: rotate(0deg);
+        box-sizing: border-box;
+        height: 54px;
+        flex-shrink: 0;
+        text-align: left;
+        overflow: hidden;
+        
+        line-height: normal;
+        }
+        
 
 
 .zone-title{
@@ -390,5 +418,3 @@ line-height: normal;
     transform: scale(1.1);
 
 }
-
-
