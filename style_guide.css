@@ -6,16 +6,14 @@
 body {
 background-color: #53A8E2;
 font-family : "Luckiest Guy" , sans-serif ;
-text-align : center;
+text-align : left;
 margin: 0;
 overflow: hidden;
-   
-
 }
 
 .vl{
 border-left: 6px solid white;
-height:80vh;
+height:75vh;
 position:absolute;
 left: 1%;
 bottom:0%;          
@@ -41,6 +39,18 @@ bottom:0%;
     top: 0%;
     left: 0%;
 }
+
+
+.silhouette{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height:90%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
     
 #startScreen {
 background-color: #53A8E2;
@@ -48,7 +58,7 @@ background-color: #53A8E2;
     
 #gameScreen, .zone-screen {
 display: none;
-background-color:#ffffff ;
+background-color:#dbefff;
 flex-direction: column;
 color:#E6821C;
 font-size: 150%;
@@ -61,6 +71,30 @@ h1 {
     font-size: 128px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+h2 {
+    color:#E6821C;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h3 {
+    color:#033b6A;
+    left: 10%;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+p {
+    color:#033b6A;
+    left: 10%;
+    font-size: 34px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 
@@ -98,7 +132,6 @@ animation-name : swimming-1 ;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
 }
-
 .fish-2 {
     position:absolute;
     animation-name : swimming-2 ;
@@ -138,7 +171,13 @@ justify-content: flex-end;
 color: white;
 font-size: 40px;
 padding: 5%;
+
 } 
+
+.zone:hover{
+    color:#E6821C;
+}
+
 
 .fish-1 {top: 20%; right: 10%; width: 100px; animation-duration: 16s; transform: scaleX(-1);}
 .fish-2 {top: 60%; left: 80%; width: 70px; animation-duration: 6s; }
@@ -146,7 +185,9 @@ padding: 5%;
 .fish-4 {top: 70%; left: 50%; width: 80px; animation-duration: 9s; }
 .fish-5 {top: 70%; left: 50%; width: 80px; animation-duration: 12s; transform: scaleX(-1);}
 
-
+.screen{width: 100%;
+    height: 100% ;
+    display: flex;}
 
 .euphotic {background: #5AA9E6;}
 .dysphotic {background: #2C7CB9;}
@@ -166,7 +207,7 @@ padding: 5%;
     position:absolute;
     left: 50px;
     top: 50px;
-    width: 50px;
+    width: 90px;
     cursor: pointer;
     z-index: 10;
     
@@ -243,54 +284,38 @@ padding: 5%;
 .dolphin {top: 300px; left: 5%; width: 500px; height: 500px;}
 .jellyfish {top:150px; left: 30%; width: 408px; height: 271px;}
 
-.squid {top: 200px; left: 70%;  width: 500.562px;height: 540.272px;}
-.whale {top: 90px; left: 5%;  width: 703.562px;height: 714.272px;}
+.squid {top: 100px; left: 70%;  width: 500.562px;height: 540.272px;}
+.whale {top: 10px; left: 5%;  width: 700.562px;height: 710.272px;}
 .crab {top: 150px; left: 45% ;  width: 283.562px;height: 244.272px;}
 
 .angler { top: 50px; left: 50%; width: 400px; height: 490px;}
 .starfish {top: 30px; left: 30%; width: 200px; height: 200px;}
-.fangtooth {top: 300px; left: 10% ;  width: 403.562px;height: 384.272px;}
+.fangtooth {top: 200px; left: 10% ;  width: 403.562px;height: 384.272px;}
 .coral{ top: 35%; left: 75%;  width: 230.562px;height: 304.272px;}
 
 
-
-.info-card  {
-  position: absolute;
-  bottom: 20px;
-  height: 160px;
-  width: 85%;
-font-family: Arial, Helvetica, sans-serif;  font-weight:800;
-  background-color: #ffffff;
-  padding:20px;
-  border-radius: 41px;
-  border:  5px solid rgb(0, 0, 0);
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  color: #033b6A;  
-  left: 5%;
-  line-height: 1.5;
-  
-    
+.boat {
+    top: 14%;
+    height: 10%;
+    width: 10%;
+    position: absolute;
+    right: 5px;;
+    z-index: 0;
 }
 
-.fact-text-e{
-width: 800px;
-text-align: left;
-transform: rotate(0deg);
-box-sizing: border-box;
-height: 54px;
-flex-shrink: 0;
-text-align: left;
-overflow: hidden;
-
-line-height: normal;
+.cloud {
+    top: 3%;
+    height: 15%;
+    width: 15%;
+    position: absolute;
+    left: 30px;;
+    z-index: 0;
 }
 
-.fact-text-d{
+
+.fact-text-e,.fact-text-d,.fact-text-a{
     width: 800px;
+    font-size: 180px;
     text-align: left;
     transform: rotate(0deg);
     box-sizing: border-box;
@@ -298,23 +323,8 @@ line-height: normal;
     flex-shrink: 0;
     text-align: left;
     overflow: hidden;
-    
     line-height: normal;
     }
-    
-    .fact-text-a{
-        width: 800px;
-        text-align: left;
-        transform: rotate(0deg);
-        box-sizing: border-box;
-        height: 54px;
-        flex-shrink: 0;
-        text-align: left;
-        overflow: hidden;
-        
-        line-height: normal;
-        }
-        
 
 
 .zone-title{
@@ -326,11 +336,39 @@ line-height: normal;
     right: 5%;
 }
 
+.info-card  {
+    position: absolute;
+    bottom: 20px;
+    min-height: 100px;
+    width: 85%;
+    overflow:hidden;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:800;
+    background-color: #ffffff;
+    padding:20px;
+    border-radius: 41px;
+    border:  5px solid rgb(0, 0, 0);
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    color: #033b6A;  
+    left: 5%;
+    line-height: 1.5; 
+    
+      
+  }
+
 .next-zone {
     background-color: #F7941E;
-    width: 318px;
+    width: 218px;
     height: 90px;
     color: white;
+    position:absolute;
+    bottom: 10px;
+    right:20px;
     font-family : "Luckiest Guy" , sans-serif ;
     font-size: 30px;
     border: 3px solid white;
@@ -343,8 +381,7 @@ line-height: normal;
     cursor: pointer;
     align-items: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    
+    transition: 0.3s;  
 }
 
 .next-zone:hover {
@@ -352,24 +389,26 @@ line-height: normal;
 }
 
 .back-home {
-    background-color: #da0909;
-    width: 318px;
+    background-color: #f71e1e;
+    width: 218px;
     height: 90px;
     color: white;
+    position:absolute;
+    bottom: 10px;
+    right:20px;
     font-family : "Luckiest Guy" , sans-serif ;
-    font-size: 40px;
-    font-weight: 400;
+    font-size: 30px;
     border: 3px solid white;
     text-align: center;
     padding: 0;
     display: flex;
     justify-content: center;
     border-radius: 30px;
-    word-wrap: break-word;
+    word-wrap: break-word; 
     cursor: pointer;
     align-items: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    transition: 0.3s;  
     
 }
 

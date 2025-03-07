@@ -1,7 +1,7 @@
 # Ocean Zones Coding for UX Designers UXDG 320
 ### Juan and Naza Mgbahurike
 
-> Project Overview
+Project Overview
 
 ## Overview / Introduction 
 
