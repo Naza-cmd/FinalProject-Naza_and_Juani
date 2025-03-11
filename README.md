@@ -11,3 +11,7 @@ The interactive sea life museum will give visitors an exciting experience, takin
 
 The Start screen is the first screen users sees when they start the experience, on this page there are animated mobile fishes, the title of the experience and the start button
 
+## Link to the Font 
+
+Download the font for the best experience.
+https://fonts.google.com/specimen/Luckiest+Guy
