@@ -13,11 +13,17 @@ The Start screen is the first screen users sees when they start the experience, 
 
 ## How To Run the Code
 To Run the Code:
-1. Download VS.code and use it to open the File .
-2. Go The Correct HTML File to Open the Code is the "MainPage.html" File and the CSS File is the "style_guide.css" File and the Javascript code in an internal script code.
-3. On the MianPage.html file Right Click and hit "Open with Live Server" or 
+1. First Download the Font "Luckiest Guy" on Google Font (Link is Below)
 
+2. Hit Get Font , Click Download all , Open the Zip File in your Folder , Unzip it and opebn the file that ends in .ttf and Install it onto your System.
 
+3. Download VS.code and use it to open the File .
+
+4. Go The Correct HTML File to Open the Code is the "MainPage.html" File and the CSS File is the "style_guide.css" File and the Javascript code in an internal script code.
+
+5. On the MianPage.html file Right Click and hit "Open with Live Server" or Command "L" and "O" at the same time.
+
+6. Make Sure Volume is On for the Full experience.
 
 ## Link to the Font 
 
