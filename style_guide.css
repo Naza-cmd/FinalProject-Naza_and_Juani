@@ -1,8 +1,10 @@
+/* CUSTOM FONT*/
 @font-face {
     font-family : "Luckiest Guy" ;
     src : url ("./fonts/LuckiestGuy.ttf");
 }
 
+/* OVERALL BODY STYLING*/
 body {
 background-color: #53A8E2;
 font-family : "Luckiest Guy" , sans-serif ;
@@ -11,6 +13,7 @@ margin: 0;
 overflow: hidden;
 }
 
+/* VERTICAL LINE STYLING*/
 .vl{
 border-left: 6px solid white;
 height:75vh;
@@ -19,6 +22,7 @@ left: 1%;
 bottom:0%;          
 }
 
+/* DEPTH TEXT CONTAINER*/
 .depth-container {
     font-size: 24px;
     left: 30px;
@@ -27,7 +31,7 @@ bottom:0%;
     color: #ffffff;
 }
 
-
+/* SCREEN CONTAINER STYLING */
 .screen {
     width: 100%;
     height: 100vh;
@@ -40,7 +44,7 @@ bottom:0%;
     left: 0%;
 }
 
-
+/* BACKGROUND SILHOUETTE*/
 .silhouette{
     position: absolute;
     bottom: 0;
@@ -52,10 +56,12 @@ bottom:0%;
     pointer-events: none;
 }
     
+/* START SCREEN STYLING*/
 #startScreen {
 background-color: #53A8E2;
 }
-    
+
+/* GAME SCREEN STYLING*/
 #gameScreen, .zone-screen {
 display: none;
 background-color:#dbefff;
@@ -64,7 +70,7 @@ color:#E6821C;
 font-size: 150%;
 }
    
-
+/*HEADER STYLING*/
 
 h1 {
     color:#033b6A;
@@ -88,6 +94,8 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
   
 }
+
+/* PARAGRAPH STYLING*/
 p {
     color:#033b6A;
     left: 10%;
@@ -97,7 +105,7 @@ p {
   
 }
 
-
+/*START BUTTON STYLING */
 .start-button {
 background-color: #F7941E;
 width: 318px;
@@ -127,6 +135,7 @@ background-color: #E6821C;
 transform: scale(1.1);
 }
 
+/* FISH ANIMATION*/
 .fish-1 {
 position:absolute;
 animation-name : swimming-1 ;
@@ -162,7 +171,39 @@ animation-iteration-count: infinite;
         }
 
 
-      
+    .fish-1 {top: 20%; right: 10%; width: 100px; animation-duration: 16s; transform: scaleX(-1);}
+    .fish-2 {top: 60%; left: 80%; width: 70px; animation-duration: 6s; }
+    .fish-3 {top: 40%; right: 30%; width: 90px; animation-duration: 10s; transform: scaleX(1); }
+    .fish-4 {top: 70%; left: 50%; width: 80px; animation-duration: 9s; }
+    .fish-5 {top: 70%; left: 50%; width: 80px; animation-duration: 12s; transform: scaleX(-1);}
+
+
+
+    @keyframes swimming-1 { 
+        0% {right:0px; top: 50px; }
+        100% { right:2000px; top: 50px; } 
+        }
+        @keyframes swimming-2 { 
+            0% {left:0px; top: 250px; }
+            100% { left:2080px; top:250px; } 
+            }
+            @keyframes swimming-3 { 
+                0% {right:0px; top: 750px; }
+                100% { right:2000px; top:750px; } 
+                }
+                @keyframes swimming-4 { 
+                    0% {left:0px; top: 390px; }
+                    100% { left:2000px; top:390px; } 
+                    }
+                    @keyframes swimming-5 { 
+                        0% {left:0px; top: 900px; }
+                        100% { left:2000px; top:900px; } 
+                        }
+    
+    
+    
+
+/* ZONE SECTION STYLING*/     
 .zone{
 width: 100%;
 height: 100% ;
@@ -180,30 +221,27 @@ padding: 5%;
 }
 
 
-.fish-1 {top: 20%; right: 10%; width: 100px; animation-duration: 16s; transform: scaleX(-1);}
-.fish-2 {top: 60%; left: 80%; width: 70px; animation-duration: 6s; }
-.fish-3 {top: 40%; right: 30%; width: 90px; animation-duration: 10s; transform: scaleX(1); }
-.fish-4 {top: 70%; left: 50%; width: 80px; animation-duration: 9s; }
-.fish-5 {top: 70%; left: 50%; width: 80px; animation-duration: 12s; transform: scaleX(-1);}
+.zone-title{
+    font-size: 50px;
+    color: #ffffff;
+    top: 50PX;
+    position: absolute;
+    z-index: 11;
+    right: 5%;
+}
 
-.screen{width: 100%;
-    height: 100% ;
-    display: flex;}
 
+/* STYLING FOR THE DIFFERENT OCEAN ZONES*/  
 .euphotic {background: #5AA9E6;}
 .dysphotic {background: #2C7CB9;}
 .aphotic {background:#033b6A}
 
-.fish-1, .fish-2, .fish-3, .fish-4, .fish-5{
-    position: absolute;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
+/* HIDDEN AUDIO ELEMENTS*/  
 .audio{
     display: none;
 }
 
+/* HOME BUTTON STYLING*/  
 .home-button {
     position:absolute;
     left: 50px;
@@ -215,24 +253,36 @@ padding: 5%;
 
 }
 
-.zone-name{
-    font-size: 100px;
-    color: #e6821c;
-    font-weight: bold;
-}
-
-
-.zone-title{
-    font-size: 50px;
-    color:#e6821c;
-    position: absolute;
-    top:30px;
-    right: 50px;
-    text-transform:uppercase;
-}
-
+.back-home {
+    background-color: #f71e1e;
+    width: 218px;
+    height: 90px;
+    color: white;
+    position:absolute;
+    bottom: 10px;
+    right:20px;
+    font-family : "Luckiest Guy" , sans-serif ;
+    font-size: 30px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    word-wrap: break-word; 
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;  
     
+}
 
+.back-home:hover {
+    background-color: #2C7CB9;
+}
+
+
+/* INDIVUAL SELECTED OCEAN WATER STYLING*/  
 .ocean-water-e{
     position :absolute;width: 100%;
     background-color:#5AA9E6;
@@ -268,7 +318,9 @@ padding: 5%;
     height: 1194px;
     padding: 20px;
 }
-  
+
+/* ANIMAL STYLING FOR SEA CREATURES*/  
+
 .animal {
     transition: transform 0.3s ease-in-out;
     cursor: pointer; 
@@ -294,6 +346,7 @@ padding: 5%;
 .fangtooth {top: 200px; left: 10% ;  width: 403.562px;height: 384.272px;}
 .coral{ top: 35%; left: 75%;  width: 230.562px;height: 304.272px;}
 
+/*MAIN SCREEN DECORATIVE IMAGES*/  
 
 .boat {
     top: 14%;
@@ -313,7 +366,7 @@ padding: 5%;
     z-index: 0;
 }
 
-
+/*INFOR CARD AND INFO TEXT STYLING*/ 
 .fact-text-e,.fact-text-d,.fact-text-a{
     width: 800px;
     font-size: 180px;
@@ -327,15 +380,6 @@ padding: 5%;
     line-height: normal;
     }
 
-
-.zone-title{
-    font-size: 50px;
-    color: #ffffff;
-    top: 50PX;
-    position: absolute;
-    z-index: 11;
-    right: 5%;
-}
 
 .info-card  {
     position: absolute;
@@ -361,7 +405,7 @@ padding: 5%;
     
       
   }
-
+/*NEXT ZONE*/ 
 .next-zone {
     background-color: #F7941E;
     width: 218px;
@@ -389,72 +433,6 @@ padding: 5%;
     background-color: #2C7CB9;
 }
 
-.back-home {
-    background-color: #f71e1e;
-    width: 218px;
-    height: 90px;
-    color: white;
-    position:absolute;
-    bottom: 10px;
-    right:20px;
-    font-family : "Luckiest Guy" , sans-serif ;
-    font-size: 30px;
-    border: 3px solid white;
-    text-align: center;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    border-radius: 30px;
-    word-wrap: break-word; 
-    cursor: pointer;
-    align-items: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;  
-    
-}
-
-.back-home:hover {
-    background-color: #2C7CB9;
-}
 
 
 
-
-
-@keyframes swimming-1 { 
-    0% {right:0px; top: 50px; }
-    100% { right:2000px; top: 50px; } 
-    }
-    @keyframes swimming-2 { 
-        0% {left:0px; top: 250px; }
-        100% { left:2080px; top:250px; } 
-        }
-        @keyframes swimming-3 { 
-            0% {right:0px; top: 750px; }
-            100% { right:2000px; top:750px; } 
-            }
-            @keyframes swimming-4 { 
-                0% {left:0px; top: 390px; }
-                100% { left:2000px; top:390px; } 
-                }
-                @keyframes swimming-5 { 
-                    0% {left:0px; top: 900px; }
-                    100% { left:2000px; top:900px; } 
-                    }
-
-.sea-creatures {
-    position: relative;
-    height: 60vh;
-}
-
-.creature {
-    width: 150px;
-    position: absolute;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.creature:hover {
-    transform: scale(1.1);
-
-}
