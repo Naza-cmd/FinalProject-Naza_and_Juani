@@ -1,121 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata and Page Title-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocean Zones</title>
+
+    <!-- Extrnal CSS File Link -->
     <link rel="StyleSheet" type="text/css" href="style_guide.css"/>
 </head>
+
 <body>
+    <!-- Background Ocean Audio-->
     <audio id = "myAudio" loop> 
         <source src="[Instrumental Theme] Under The Sea [The Little Mermaid].mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Start Screen With Fish Animation and Start Button-->
     <div id="startScreen" class="screen">
        
         <h1>OCEAN ZONES</h1>
         <button class="start-button" onclick="startGame()">START</button>
+
+        <!--Fish For Animation-->
         <img src="Fish1.png" alt="Fish 1" class="fish-1">
         <img src="Fish1.png" alt="Fish 2" class="fish-2">
         <img src="fishy.png" alt="Fish 3" class="fish-3">
         <img src="Group.png" alt="Fish 4" class="fish-4">
         <img src="lastfishy.png" alt="Fish 5" class="fish-5">
         
-     
     </div>
  
+    <!-- Main Game Screen Where Users Can Select A Zone-->
     <div id="gameScreen" class="screen">
+        <!-- Decorative Scene Images -->
         <img src = "FishSil.png" class ="silhouette">
         <img src = "Clouds.png" class ="cloud">
         <img src = "Boat.png" class ="boat">
+
+        <!-- Game Instructions-->
         <h2>PICK AN OCEAN ZONE</h2>
         <h3>Click On A Zone To Learn More About The Aquatic Life There.</h3>
         <div class="vl"></div>
         
-   
+        <!--Clickable Ocean Zones-->
         <div class="zone euphotic" onclick="showZone('euphotic')">EUPHOTIC ZONE</div>
         <div class="zone dysphotic" onclick="showZone('dysphotic')">DYSPHOTIC ZONE</div>
         <div class="zone aphotic" onclick="showZone('aphotic')">APHOTIC ZONE</div>
 
+        <!-- Zone Depths-->
         <div class="depth-container" style="top: 230px;">- Sea Level</div>
         <div class="depth-container" style="top: 470px;">- 200 Meters</div>
         <div class="depth-container" style="top: 680px;">- 1000+ Meters</div>
     </div>
-
+        <!--EUPHOTIC ZONE -->
     <div id="euphoticZone" class="zone-screen">
-        
+
         <h1 class="zone-title">EUPHOTIC ZONE</h1>
-        <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()">
+        <img src="Home.png" alt="Home" class="home-button" onclick= "goHome()"> <!-- Home Button To Return to Game Screen (Main Screen)-->
         
-        <div class="ocean-water-e">
+
+        <div class="ocean-water-e"> <!-- Euphotic Zone Ocean Water Class-->
+
+            <!-- Clickable Sea Creatures-->
             <img src="image-from-rawpixel-id-15709245-png.png" alt="Turtle" class="animal turtle" onclick="showFact('Hi! I am <span style= \'color: #F7941E ;\'> Shelly the Turtle </span> and I live in the Euphotic zone, where <span style= \'color: #F7941E;\'>it is rich in Food, Sunlight and Warmth.</span> ' ,'fact-text-e')">
-            <img src="image.png" alt="Dolphin" class="animal dolphin" onclick="showFact('Sup! <span style= \'color: #F7941E;\'> I am Flipper the Dolphin</span> and I communicate with my friends by  whistling and making high pitched noises, its called <span style= \'color: #F7941E;\'>Echolocation.</span>','fact-text-e')">
-            <img src="image-from-rawpixel-id-9371553-png.png" alt="Jellyfish" class="animal jellyfish" onclick="showFact('Hi!<span style= \'color: #F7941E;\'> I am Bubbles the Jellyfish</span> and I live in upper most layer of the ocean, it extends about <span style= \'color: #F7941E;\'>200 meters deep','fact-text-e')">
+            <img src="image.png" alt="Dolphin" class="animal dolphin" onclick="showFact('Sup! I am  <span style= \'color: #F7941E;\'> Flipper the Dolphin</span> and I communicate with my friends by  whistling and making high pitched noises, its called <span style= \'color: #F7941E;\'>Echolocation.</span>','fact-text-e')">
+            <img src="image-from-rawpixel-id-9371553-png.png" alt="Jellyfish" class="animal jellyfish" onclick="showFact('Ayo! I am <span style= \'color: #F7941E;\'> Bubbles the Jellyfish</span> and I live in upper most layer of the ocean, it extends from the <span style= \'color: #F7941E;\'>surface of the ocean to 200 meters deep','fact-text-e')">
         </div>
+
+            <!-- Info Card Contained Corresponding Sea Creature Fact.-->
         <div class="info-card">
             <p id="fact-text-e">Tap On A Sea Creature To Learn Fun Facts About It</p>
-            <button class="next-zone" onclick="showZone('dysphotic')">Next Zone</button>
+            <button class="next-zone" onclick="showZone('dysphotic')">Next Zone</button> <!-- Next Zone Button Leading To The Zone Below-->
         </div>
     </div>
-
+         <!--DYSPHOTIC ZONE -->
     <div id="dysphoticZone" class="zone-screen">
+
         <h1 class="zone-title">DYSPHOTIC ZONE</h1>
-        <img src="Home.png" alt="Home" class="home-button" onclick="goHome()">
-        <div class="ocean-water-d">
-            <img src="RealSquid.png" alt="Squid" class="animal squid" onclick="showFact('Hi! I am <span style= \'color: #F7941E;\'>Eddy the Squid</span> and I live in the Dysphotic zone also known as the <span style= \'color: #F7941E;\'>Dark Zone</span>. This zone stores the oceans supply of <span style= \'color: #F7941E;\'>Carbon.</span> ','fact-text-d')">
-            <img src="RealWhale.png" alt="Whale" class="animal whale" onclick="showFact('Hi! I am <span style= \'color: #F7941E;\'>Fin the Blue Whale </span>and I live in the Dysphotic zone, where only a dim amount of light gets in and extends over <span style= \'color: #F7941E;\'>200 meters deep.</span> ','fact-text-d')">
-            <img src="RealCrab.png" alt="Crab" class="animal crab" onclick="showFact('Hi! I am <span style= \'color: #F7941E;\'>Eugene a Red Crab</span> and I am a <span style= \'color: #F7941E;\'>Crustacean</span>, thats why I have a Hard Red Shell. Many sea creatures in this zone are <span style= \'color: #F7941E;\'>bioluminescent.</span> ','fact-text-d')">
+        <img src="Home.png" alt="Home" class="home-button" onclick="goHome()"> <!-- Home Button To Return to Game Screen (Main Screen)-->
+        
+        <div class="ocean-water-d"><!-- Dysphotic Zone Ocean Water Class-->
+
+            <!-- Clickable Sea Creatures-->
+            <img src="RealSquid.png" alt="Squid" class="animal squid" onclick="showFact('Yo! I am <span style= \'color: #F7941E;\'>Eddy the Squid</span> and I live in the Dysphotic zone also known as the <span style= \'color: #F7941E;\'>Dark Zone</span>. This zone stores the oceans supply of <span style= \'color: #F7941E;\'>Carbon.</span> ','fact-text-d')">
+            <img src="RealWhale.png" alt="Whale" class="animal whale" onclick="showFact('Wassup! I am <span style= \'color: #F7941E;\'>Fin the Blue Whale </span>and I live in the Dysphotic zone, where only a dim amount of light gets in and some creature even have  <span style= \'color: #F7941E;\'>light-sensitive eyes</span> because of how dark it is. ','fact-text-d')">
+            <img src="RealCrab.png" alt="Crab" class="animal crab" onclick="showFact('Hey! I am <span style= \'color: #F7941E;\'>Eugene the Red Crab</span> and I am a <span style= \'color: #F7941E;\'>Crustacean</span>, thats why I have a Hard Red Shell. Many sea creatures in this zone are <span style= \'color: #F7941E;\'>bioluminescent.</span> ','fact-text-d')">
         </div>
+
+        <!-- Info Card Contained Corresponding Sea Creature Fact.-->
         <div class="info-card">
             <p id="fact-text-d">Tap On A Sea Creature To Learn Fun Facts About It</p>
-            <button class="next-zone" onclick="showZone('aphotic')">Next Zone</button>
+            <button class="next-zone" onclick="showZone('aphotic')">Next Zone</button><!-- Next Zone Button Leading To The Zone Below-->
+        </div>
         </div>
     </div>
-
+        <!--APHOTIC ZONE -->
     <div id="aphoticZone" class="zone-screen">
+
         <h1 class="zone-title">APHOTIC ZONE</h1>
-        <img src="Home.png" alt="Home" class="home-button" onclick="goHome()">
-        <div class="ocean-water-a">
+        <img src="Home.png" alt="Home" class="home-button" onclick="goHome()"><!-- Home Button To Return to Game Screen (Main Screen)-->
+
+        <div class="ocean-water-a"><!-- Aphotic Zone Ocean Water Class-->
+
+            <!-- Clickable Sea Creatures-->
             <img src="RealAnglerFish.png" alt="Angler" class="animal angler" onclick="showFact('Hello ! I am <span style= \'color: #F7941E;\'>Dream the Angler Fish</span> and I live in the Aphotic Zone, I have a snout that ends in a glowing lure that light up my path , its called a <span style= \'color: #F7941E;\'>illicium.</span> ','fact-text-a')">
-            <img src="RealStarfish.png" alt="Starfish" class="animal starfish" onclick="showFact('Hi ! I am <span style= \'color: #F7941E;\'>Patrick the Starfish</span> and I live in the Aphotic  zone, I am able to grow a new arm of leg if I loose one, or make a new starfish all on my own. ' ,'fact-text-a')">
+            <img src="RealStarfish.png" alt="Starfish" class="animal starfish" onclick="showFact('Howdy ! I am <span style= \'color: #F7941E;\'>Patrick the Starfish</span> and I live in the Aphotic  zone, I am able to grow a new arm of leg if I loose one, or make a new starfish all on my own. ' ,'fact-text-a')">
             <img src="RealFangtooth.png" alt="Fangtooth" class="animal fangtooth" onclick="showFact('What Up ! I am <span style= \'color: #F7941E;\'>Greg the Fangtooth Fish</span> and I live in the Aphotic zone, where no light gets into and<span style= \'color: #F7941E;\'> the pressure down here is very very high</span>. ','fact-text-a')">
-            <img src="RealCoral.png" alt="CoralReef" class="animal coral" onclick="showFact('Hi ! I am <span style= \'color: #F7941E;\'>Cory and Im a Coral reef</span>, A soft bodied marine <span style= \'color: #F7941E;\'>invertebrate</span>.I live in the Aphotic Zone and make reefs. ','fact-text-a')">
+            <img src="RealCoral.png" alt="CoralReef" class="animal coral" onclick="showFact('Hi ! I am <span style= \'color: #F7941E;\'>Cory The Coral reef</span>, A soft bodied marine <span style= \'color: #F7941E;\'>invertebrate</span>.I live in the Aphotic Zone and make reefs. ','fact-text-a')">
         </div>
+
+        <!-- Info Card Contained Corresponding Sea Creature Fact.-->
         <div class="info-card">
             <p id="fact-text-a">Tap On A Sea Creature To Learn Fun Facts About It</p>
-            <button class="back-home" onclick="goHome()">Back</button>
+            <button class="back-home" onclick="goHome()">Back</button><!-- Back Button that Lead to the Main Page -->
         </div>
     </div>
 
     <script>
+        // Function To Start Game
         function startGame() {
-            let audio = document.getElementById('myAudio');
-            audio.play();
-            document.getElementById('startScreen').style.display = 'none';
-            document.getElementById('gameScreen').style.display = 'flex';
+            let audio = document.getElementById('myAudio'); //Get the audio
+            audio.play(); // Play background music
+            document.getElementById('startScreen').style.display = 'none'; // Hide the Start Screen
+            document.getElementById('gameScreen').style.display = 'flex'; // Show the Game Screen
 
         
         }
-
+        // Function to display the selected ocean zone and hide others
         function showZone(zone) {
-            document.getElementById('gameScreen').style.display = 'none';
-            document.getElementById('euphoticZone').style.display = 'none';
-            document.getElementById('dysphoticZone').style.display = 'none';
-            document.getElementById('aphoticZone').style.display = 'none';
-            document.getElementById(`${zone}Zone`).style.display = 'block';
+            document.getElementById('gameScreen').style.display = 'none'; // Hide the Main Game Screen
+            document.getElementById('euphoticZone').style.display = 'none'; // Hide Euphotic Zone Screen 
+            document.getElementById('dysphoticZone').style.display = 'none'; // Hide Dysphotic Zone Screen
+            document.getElementById('aphoticZone').style.display = 'none'; // Hide Aphotic Zone Screen
+            document.getElementById(`${zone}Zone`).style.display = 'block'; // Show The Selected Ocean Zone
         }
-
+        // Function to Return to the Main Game Screen from Any Zone
         function goHome() {
-            document.getElementById('euphoticZone').style.display = 'none';
-            document.getElementById('dysphoticZone').style.display = 'none';
-            document.getElementById('aphoticZone').style.display = 'none';
-            document.getElementById('gameScreen').style.display = 'flex';
+            document.getElementById('euphoticZone').style.display = 'none'; // Hide Euphotic Zone Screen 
+            document.getElementById('dysphoticZone').style.display = 'none'; // Hide Dsyphotic Zone Screen 
+            document.getElementById('aphoticZone').style.display = 'none'; // Hide Aphotic Zone Screen 
+            document.getElementById('gameScreen').style.display = 'flex'; // Show the Main Game Screen 
         }
-
+        // Function to Display fun facts about the selected sea creature
         function showFact(fact ,factTextId) {
-            document.getElementById(factTextId).innerHTML = fact;
-        }
+            document.getElementById(factTextId).innerHTML = fact; // Update the Text of the Fcat Display Area
 
-        
+        }
 
     </script>
 </body>
